@@ -6,6 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
 	    int opcion;
+        int numero,n1,n2;
         Scanner entrada = new Scanner(System.in);
 
         do {
@@ -20,6 +21,22 @@ public class Main {
 
             // TODO Completa el programa con un switch para realizar lo indicado en el menú.
             //      Usa los métodos estáticos que ya hay implementadas y que puedes ver debajo.
+
+            switch (opcion){
+                case 1 :
+                    numero = pedirNumero(entrada,"Dame un numero: ");
+                    dibujarCuadrado(numero);
+                    break;
+                case 2:
+                    numero = pedirNumero(entrada,"Dame un numero: ");
+                    dibujarTrianguloRectangulo(numero);
+                    break;
+                case 3:
+                    n1 = pedirNumero(entrada,"Dame un numero: ");
+                    n2 = pedirNumero(entrada,"Dame otro numero: ");
+                    dibujarPuntos(n1,n2);
+                    break;
+            }
 
             System.out.print("Intro para continuar...");
             entrada.nextLine();
